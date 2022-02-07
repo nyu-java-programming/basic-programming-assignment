@@ -39,18 +39,20 @@ public class PopulationProjector {
      */
     public static void main(String[] args) throws Exception {
         double year0 = 332403650; // current population
-        double birthsPerYear = (1.0 / 7) * 60 * 60 * 24 * 365; // one every 7 seconds
-        double deathsPerYear = (1.0 / 13) * 60 * 60 * 24 * 365; // one every 13 seconds
-        double immigrantsPerYear = (1.0 / 45) * 60 * 60 * 24 * 365; // one every 45 seconds
+        int secondsPerYear = 60 * 60 * 24 * 365;
+        double birthsPerYear = (1.0 / 7.0) * secondsPerYear; // one every 7 seconds
+        double deathsPerYear = (1.0 / 13.0) * secondsPerYear; // one every 13 seconds
+        double immigrantsPerYear = (1.0 / 45.0) * secondsPerYear; // one every 45 seconds
+        double populationChangePerYear = birthsPerYear + immigrantsPerYear - deathsPerYear;
         // System.out.println("Births per year: " + birthsPerYear);
         // System.out.println("Deaths per year: " + deathsPerYear);
         // System.out.println("Immigrants per year: " + immigrantsPerYear);
 
-        int year1 = (int) (year0 + birthsPerYear + immigrantsPerYear - deathsPerYear);
-        int year2 = (int) (year1 + birthsPerYear + immigrantsPerYear - deathsPerYear);
-        int year3 = (int) (year2 + birthsPerYear + immigrantsPerYear - deathsPerYear);
-        int year4 = (int) (year3 + birthsPerYear + immigrantsPerYear - deathsPerYear);
-        int year5 = (int) (year4 + birthsPerYear + immigrantsPerYear - deathsPerYear);
+        int year1 = (int) (year0 + populationChangePerYear);
+        int year2 = (int) (year1 + populationChangePerYear);
+        int year3 = (int) (year2 + populationChangePerYear);
+        int year4 = (int) (year3 + populationChangePerYear);
+        int year5 = (int) (year4 + populationChangePerYear);
 
         System.out.println("Here are the projected population numbers for the next five years:");
         System.out.println("- Year 2023: " + year1);
