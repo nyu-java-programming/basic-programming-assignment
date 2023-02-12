@@ -36,10 +36,10 @@ public class CompoundInflation_Test {
         "$43"
     };
     private String[] expectedOutputs = {
-        "If you save $120 per month with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $114 today.",
-        "If you save $1600 per month with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $1522 today.",
-        "If you save $2100 per month with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $1997 today.",
-        "If you save $45 per month with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $43 today."
+        "If you save $120 with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $114 today.",
+        "If you save $1600 with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $1522 today.",
+        "If you save $2100 with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $1997 today.",
+        "If you save $45 with 10% annual inflation, after 6 months, your account will hold an amount equivalent to $43 today."
     };
 
     @Test
@@ -81,6 +81,5 @@ public class CompoundInflation_Test {
             }
         }
     }
-
 
 }

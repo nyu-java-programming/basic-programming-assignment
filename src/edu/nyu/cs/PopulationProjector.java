@@ -1,6 +1,5 @@
 package edu.nyu.cs;
 
-import java.util.Scanner;
 
 /**
  * This question is based on Question 1-11 in Liang's Intro to Java textbook.

@@ -40,6 +40,7 @@ public class RunningSpeedCalculator {
     double timeHours = Double.parseDouble(timeMinutes) / 60;
     double speedMilesPerHour = distanceMiles / timeHours;
     System.out.println("Your average speed was " + speedMilesPerHour + " miles per hour.");
+    scn.close();
   }
 
 
